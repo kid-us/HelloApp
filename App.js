@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import {
   StyleSheet,
   Text,
@@ -7,6 +6,8 @@ import {
   TouchableHighlight,
   Button,
   Alert,
+  Platform,
+  StatusBar,
 } from "react-native";
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
       <Text
         onPress={handlePress}
         numberOfLines={1}
-        style={{ color: "white", fontSize: 20, fontWeight: "bold", margin: 30 }}
+        style={{ color: "white", fontSize: 20, fontWeight: "bold" }}
       >
         Hello React Native World!
       </Text>
@@ -79,7 +80,6 @@ export default function App() {
           />
         </View>
       </View>
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -89,8 +89,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     backgroundColor: "dodgerblue",
-    alignItems: "center",
-    justifyContent: "center",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    // alignItems: "center",
+    // justifyContent: "center",
   },
   logo: {
     width: 250,
