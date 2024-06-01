@@ -16,7 +16,6 @@ export default function App() {
           This is my first React Native App!
         </Text>
       </View>
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -25,7 +24,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    marginTop: 40,
     backgroundColor: "dodgerblue",
     // alignItems: "center",
     // justifyContent: "center",
