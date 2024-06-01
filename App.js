@@ -5,6 +5,8 @@ import {
   View,
   Image,
   TouchableHighlight,
+  Button,
+  Alert,
 } from "react-native";
 
 export default function App() {
@@ -20,7 +22,10 @@ export default function App() {
       >
         Hello React Native World!
       </Text>
+
+      {/* Touchable */}
       <TouchableHighlight onPress={() => console.log("Image Clicked")}>
+        {/* Images */}
         <Image
           // blurRadius={1}
           fadeDuration={1000}
@@ -34,6 +39,24 @@ export default function App() {
           }}
         ></Image>
       </TouchableHighlight>
+
+      {/* Buttons */}
+
+      <View>
+        <Text style={styles.title}>
+          This layout strategy lets the title define the width of the button.
+        </Text>
+        <View style={styles.fixToText}>
+          <Button
+            title="Left button"
+            onPress={() => Alert.alert("Left button pressed")}
+          />
+          <Button
+            title="Right button"
+            onPress={() => Alert.alert("Right button pressed")}
+          />
+        </View>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -48,8 +71,16 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   logo: {
-    width: 400,
-    height: 500,
+    width: 250,
+    height: 200,
     borderRadius: 10,
+  },
+  title: {
+    textAlign: "center",
+    marginVertical: 8,
+  },
+  fixToText: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
