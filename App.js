@@ -1,5 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableHighlight,
+} from "react-native";
 
 export default function App() {
   const handlePress = () => {
@@ -14,7 +20,7 @@ export default function App() {
       >
         Hello React Native World!
       </Text>
-      <TouchableOpacity onPress={() => console.log("Image Clicked")}>
+      <TouchableHighlight onPress={() => console.log("Image Clicked")}>
         <Image
           // blurRadius={1}
           fadeDuration={1000}
@@ -27,7 +33,7 @@ export default function App() {
             uri: "https://picsum.photos/200/300",
           }}
         ></Image>
-      </TouchableOpacity>
+      </TouchableHighlight>
       <StatusBar style="auto" />
     </View>
   );
