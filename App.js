@@ -49,11 +49,33 @@ export default function App() {
         <View style={styles.fixToText}>
           <Button
             title="Left button"
-            onPress={() => Alert.alert("Left button pressed")}
+            onPress={() =>
+              Alert.alert("My Title", "Message", [
+                {
+                  text: "No",
+                  onPress: () => console.log("Left button No Pressed"),
+                },
+                {
+                  text: "Yes",
+                  onPress: () => console.log("Left button Yes Pressed"),
+                },
+              ])
+            }
           />
           <Button
             title="Right button"
-            onPress={() => Alert.alert("Right button pressed")}
+            onPress={() =>
+              Alert.alert("My Title", "My Message", [
+                {
+                  text: "Yes",
+                  onPress: () => console.log("Right button Yes Pressed"),
+                },
+                {
+                  text: "No",
+                  onPress: () => console.log("Right button No Pressed"),
+                },
+              ])
+            }
           />
         </View>
       </View>
