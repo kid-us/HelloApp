@@ -4,8 +4,18 @@ import { StyleSheet, Text, View } from "react-native";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={{ color: "white" }}>Hello World!</Text>
-      <Text>This is my first React Native App!</Text>
+      <View style={styles.innerContainer}>
+        <Text
+          onPress={() => console.log("Hello World")}
+          numberOfLines={1}
+          style={{ color: "white", fontSize: 20, fontWeight: "bold" }}
+        >
+          Hello World!
+        </Text>
+        <Text style={{ fontSize: 15, fontWeight: "semibold" }}>
+          This is my first React Native App!
+        </Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -15,9 +25,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    marginTop: 50,
+    marginTop: 40,
     backgroundColor: "dodgerblue",
     // alignItems: "center",
     // justifyContent: "center",
+  },
+
+  innerContainer: {
+    padding: 30,
   },
 });
