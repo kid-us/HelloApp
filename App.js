@@ -18,13 +18,18 @@ export default function App() {
           backgroundColor: "green",
           // width: 100,
           // flexBasis: 100, // width or
-          width: 400,
-          // flex: 1,
+          width: 100,
           height: 100,
-          flexShrink: 2,
         }}
       />
-      <View style={{ backgroundColor: "yellow", width: 100, height: 100 }} />
+      <View
+        style={{
+          backgroundColor: "gold",
+          width: 100,
+          height: 100,
+          top: 80,
+        }}
+      />
       <View style={{ backgroundColor: "tomato", width: 100, height: 100 }} />
     </View>
   );
