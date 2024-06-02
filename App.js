@@ -1,36 +1,11 @@
-import {
-  Dimensions,
-  StyleSheet,
-  View,
-  Platform,
-  StatusBar,
-  useWindowDimensions,
-} from "react-native";
-
-import { useDeviceOrientation } from "@react-native-community/hooks";
+import { StyleSheet, View, Platform, StatusBar } from "react-native";
 
 export default function App() {
-  const orientation = useDeviceOrientation();
-
   return (
-    <View style={style.container}>
-      <View
-        style={{
-          backgroundColor: "dodgerblue",
-          width: "100%",
-          height: orientation === "landscape" ? "100%" : "30%",
-        }}
-      ></View>
+    <View style={{ backgroundColor: "#fff", flex: 1 }}>
+      <View style={{ backgroundColor: "green", flex: 2 }} />
+      <View style={{ backgroundColor: "yellow", flex: 1 }} />
+      <View style={{ backgroundColor: "tomato", flex: 2 }} />
     </View>
   );
 }
-
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
