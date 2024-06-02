@@ -4,14 +4,22 @@ import {
   View,
   Platform,
   StatusBar,
+  useWindowDimensions,
 } from "react-native";
 
+import { useDeviceOrientation } from "@react-native-community/hooks";
+
 export default function App() {
-  console.log(Dimensions.get("screen"));
+  const orientation = useDeviceOrientation();
+
   return (
     <View style={style.container}>
       <View
-        style={{ backgroundColor: "dodgerblue", width: 150, height: 70 }}
+        style={{
+          backgroundColor: "dodgerblue",
+          width: "100%",
+          height: orientation === "landscape" ? "100%" : "30%",
+        }}
       ></View>
     </View>
   );
