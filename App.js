@@ -8,5 +8,5 @@ import Texts from "./Texts";
 import Icons from "./Icons";
 
 export default function App() {
-  return <Icons />;
+  return <Texts />;
 }
