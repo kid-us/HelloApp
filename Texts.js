@@ -1,20 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import AppText from "./app/components/AppText";
 
 function Texts(props) {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text
-        style={{
-          //   fontFamily: "Roboto",
-          fontSize: 30,
-          fontStyle: "italic",
-          fontWeight: "bold",
-          textAlign: "center",
-        }}
-      >
-        Hello React Native! This is my first React Native App
-      </Text>
+      <AppText>Hello React Native! This is my first React Native App</AppText>
     </View>
   );
 }
