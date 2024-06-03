@@ -3,7 +3,14 @@ import { View } from "react-native";
 
 function Icons(props) {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "#fff",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <MaterialCommunityIcons
         name="email"
         size={100}
