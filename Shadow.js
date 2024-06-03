@@ -22,23 +22,28 @@ function Shadows(props) {
           shadowOffset: { width: 10, height: 10 },
           shadowRadius: 30,
           shadowOpacity: 1,
+          //   Padding
+          padding: 20,
+          paddingHorizontal: 20,
         }}
       >
-        <Text
+        <View
           style={{
-            flex: 1,
-            justifyContent: "center",
-            textAlign: "center",
-            alignItems: "center",
-            alignContent: "center",
-            color: "#fff",
-            fontSize: 40,
-            marginTop: 20,
+            width: 50,
+            height: 50,
+            backgroundColor: "#000",
           }}
-        >
-          Hi
-        </Text>
+        ></View>
       </View>
+      <View
+        style={{
+          backgroundColor: "tomato",
+          height: 100,
+          width: 100,
+          borderRadius: 10,
+          margin: 40,
+        }}
+      ></View>
     </View>
   );
 }
