@@ -6,7 +6,6 @@ function AppText({ children, style }) {
 
 const styles = StyleSheet.create({
   text: {
-    color: "tomato",
     ...Platform.select({
       android: {
         fontSize: 20,

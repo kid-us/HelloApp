@@ -8,24 +8,8 @@ import Texts from "./Texts";
 import Icons from "./Icons";
 import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
-  return (
-    // <WelcomeScreen />
-    <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
-      <Card
-        title="Red Jacket"
-        subTitle="$ 100"
-        image={require("./app/assets/jacket.jpg")}
-      />
-    </View>
-  );
+  return <ListingDetailsScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
