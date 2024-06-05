@@ -4,22 +4,29 @@ import ListItem from "../components/ListItem";
 import Screen from "../components/Screen";
 import ListItemSeparator from "../components/ListItemSeparator";
 import ListItemDeleteAction from "../components/ListItemDeleteAction";
+import { useState } from "react";
 
+const initialMessage = [
+  {
+    id: 1,
+    title: "T 1",
+    description: "D 1",
+    image: require("../assets/mosh.jpg"),
+  },
+  {
+    id: 2,
+    title: "T 2",
+    description: "D 2",
+    image: require("../assets/mosh.jpg"),
+  },
+];
 function MessageScreen() {
-  const messages = [
-    {
-      id: 1,
-      title: "T 1",
-      description: "D 1",
-      image: require("../assets/mosh.jpg"),
-    },
-    {
-      id: 2,
-      title: "T 2",
-      description: "D 2",
-      image: require("../assets/mosh.jpg"),
-    },
-  ];
+  const [messages, setMessage] = useState(initialMessage);
+
+  // Delete Message
+  const handleDelete = (message) => {
+    setMessage(messages.filter((m) => m.id !== message.id));
+  };
 
   return (
     <Screen>
@@ -33,7 +40,9 @@ function MessageScreen() {
             title={item.title}
             subTitle={item.description}
             onPress={() => console.log("Message Selected", item)}
-            onSwipeLeft={ListItemDeleteAction}
+            onSwipeLeft={() => (
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
+            )}
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
