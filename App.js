@@ -7,13 +7,18 @@ import Shadows from "./Shadow";
 import Texts from "./Texts";
 import Icons from "./Icons";
 import AppButton from "./app/components/AppButton";
+import Card from "./app/components/Card";
+
 export default function App() {
   return (
-    
-    <WelcomeScreen />
-    // <View style={styles.container}>
-    //   <AppButton title="Login" onPress={() => console.log("Tapped")} />
-    // </View>
+    // <WelcomeScreen />
+    <View style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}>
+      <Card
+        title="Red Jacket"
+        subTitle="$ 100"
+        image={require("./app/assets/jacket.jpg")}
+      />
+    </View>
   );
 }
 
