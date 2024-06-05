@@ -10,7 +10,12 @@ import AppButton from "./app/components/AppButton";
 import Card from "./app/components/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessageScreen from "./app/screens/MessageScreen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
-  return <MessageScreen />;
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <MessageScreen />
+    </GestureHandlerRootView>
+  );
 }
