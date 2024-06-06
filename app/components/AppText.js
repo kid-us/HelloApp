@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   text: {
     ...Platform.select({
       android: {
-        fontSize: 20,
+        fontSize: 10,
         fontFamily: "Roboto",
       },
       ios: {
