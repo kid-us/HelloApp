@@ -26,15 +26,16 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     padding: 15,
+    backgroundColor: colors.white,
   },
   detailsContainer: {
     marginLeft: 10,
     justifyContent: "center",
   },
   image: {
-    width: 75,
-    height: 75,
-    borderRadius: 35,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     marginRight: 15,
   },
   subTitle: {

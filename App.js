@@ -15,14 +15,12 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import AppIcons from "./app/components/AppIcons";
 import Screen from "./app/components/Screen";
 import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Screen>
-        {/* <AppIcons name="email" size={50} bgColor="tomato" iconColor="white" /> */}
-        <ListItem title="My Title" IconComponent={<AppIcons name="email" />} />
-      </Screen>
+      <AccountScreen />
     </GestureHandlerRootView>
   );
 }
