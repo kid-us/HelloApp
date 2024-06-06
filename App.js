@@ -16,11 +16,12 @@ import AppIcons from "./app/components/AppIcons";
 import Screen from "./app/components/Screen";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
+import ListingScreen from "./app/components/ListingScreen";
 
 export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <AccountScreen />
+      <ListingScreen />
     </GestureHandlerRootView>
   );
 }
