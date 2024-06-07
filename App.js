@@ -1,4 +1,4 @@
-import { View, StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image, TextInput, Text } from "react-native";
 
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
@@ -17,11 +17,23 @@ import Screen from "./app/components/Screen";
 import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingScreen from "./app/components/ListingScreen";
+import { useState } from "react";
 
 export default function App() {
+  const [firstName, setFirstName] = useState("");
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <ListingScreen />
+      <Screen>
+        <Text>{firstName}</Text>
+        <TextInput
+          maxLength={5}
+          len
+          keyboardType="numeric"
+          onChangeText={(text) => setFirstName(text)}
+          placeholder="first name"
+          style={{ borderColor: "#ccc", borderWidth: 1 }}
+        />
+      </Screen>
     </GestureHandlerRootView>
   );
 }
